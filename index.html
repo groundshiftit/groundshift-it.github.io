@@ -1,1 +1,252 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groundshift – Make change work from the inside out</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .divider {
+            text-align: center;
+            margin: 2rem 0;
+            color: #666;
+            font-size: 1.2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .intro strong {
+            color: #2c3e50;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .highlight-section {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid #e74c3c;
+        }
+
+        .cta-section {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            margin: 1rem 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #c0392b;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid #ddd;
+            color: #666;
+        }
+
+        .footer-links {
+            margin-top: 1rem;
+        }
+
+        .footer-links a {
+            color: #e74c3c;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .tagline {
+                font-size: 1.1rem;
+            }
+
+            .highlight-section,
+            .cta-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="section">
+            <h1>Groundshift</h1>
+            <p class="tagline">Make change work – from the inside out.</p>
+        </header>
+
+        <div class="divider">⸻</div>
+
+        <section class="section">
+            <p class="intro">👋 Hi, I'm <strong>[Twoje imię]</strong></p>
+            <p>I help teams uncover what truly needs to change – and shape practical, context-aware ways to make it happen.<br>
+            No playbooks. No pressure. Just smart, collaborative work that sticks.</p>
+        </section>
+
+        <div class="divider">⸻</div>
+
+        <section class="section">
+            <h2 class="section-title">🧭 You might be here because…</h2>
+            <ul>
+                <li>Your team is seen as "too slow" – but no one agrees why.</li>
+                <li>People are frustrated, but don't feel safe speaking up.</li>
+                <li>There are too many processes – and none seem to help.</li>
+                <li>Everyone's doing their own thing – and nothing feels aligned.</li>
+                <li>You tried rolling out changes – but nothing really changed.</li>
+            </ul>
+            <p class="section-subtitle">If any of this sounds familiar, you don't need a new framework.<br>
+            <strong>You need a shift – built from the ground up.</strong></p>
+        </section>
+
+        <div class="divider">⸻</div>
+
+        <section class="section">
+            <h2 class="section-title">🔧 What I do</h2>
+            <div class="highlight-section">
+                <p><strong>I specialize in bottom-up change:</strong><br>
+                The kind shaped by the people who live the problem – not just the people writing the strategy.</p>
+                
+                <p style="margin-top: 1rem;"><strong>Together, we work through:</strong></p>
+                <ul>
+                    <li>a discovery conversation to map out where you're stuck,</li>
+                    <li>interviews with team members to hear what's really going on,</li>
+                    <li>a collaborative workshop to align, design and decide,</li>
+                    <li>and a clear summary with next steps – you can run with them, or I can support the implementation.</li>
+                </ul>
+                
+                <p style="margin-top: 1rem;"><strong>Every step is adapted to your context.</strong><br>
+                No rigid templates. Just what works.</p>
+            </div>
+        </section>
+
+        <div class="divider">⸻</div>
+
+        <section class="section">
+            <h2 class="section-title">⚙️ What it's like to work with me</h2>
+            <p>People say I'm the "glue" that gets teams unstuck.<br>
+            I bring a calm, structured approach that helps things move – without drama, without forcing, and without losing people along the way.</p>
+            
+            <p style="margin-top: 1rem;">I work best with thoughtful leaders and teams who care deeply about how they work – and know that change only works when people are part of it.</p>
+        </section>
+
+        <div class="divider">⸻</div>
+
+        <section class="cta-section">
+            <h2 class="section-title" style="color: white;">👇 Let's talk</h2>
+            <p>Want to explore if Groundshift could help your team?</p>
+            <a href="#" class="cta-button">👉 Book a free 45-minute discovery call</a>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">We'll talk through what's happening, what's stuck, and whether I'm the right person to help.<br>
+            No pressure, no pitch – just a clear next step.</p>
+        </section>
+
+        <div class="divider">⸻</div>
+
+        <footer>
+            <h3>🪧 Groundshift</h3>
+            <p>Change that grows from the ground up.</p>
+            <div class="footer-links">
+                <span>📫 [email]</span> | 
+                <span>📍 Based in [City], working remotely</span><br>
+                <a href="#">🔗 LinkedIn</a> | 
+                <a href="#">Newsletter</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
