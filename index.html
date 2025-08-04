@@ -13,7 +13,7 @@
             --primary-color: #3d1a78;
             --primary-color-dark: #2e145a;
             --background-light: rgba(61, 26, 120, 0.2);
-            --background-medium: rgba(61, 26, 120, 0.7);
+            --background-medium: rgba(61, 26, 120, 0.6);
             --text-dark: #170a2e;
             --text-light: #ffffff;
         }
@@ -27,7 +27,7 @@
         }
 
         .page-wrapper {
-            background: white;
+            background: var(--background-light);
             margin: 0 auto;
             box-shadow: 0 0 40px rgba(0,0,0,0.1);
             min-height: 100vh;
@@ -146,11 +146,8 @@
         }
 
         .insight-box {
-            background: var(--background-medium);
+            background: var(--primary-color-dark);
             color: white;
-            padding: 3rem;
-            border-radius: 12px;
-            margin: 3rem 0;
             text-align: center;
         }
 
@@ -200,7 +197,7 @@
             font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 1rem;
-            color: var(--text-dark);
+            color: white;
         }
 
         .approach-highlights {
@@ -224,11 +221,11 @@
             font-size: 2rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
-            color: #1e3c72;
+            color: var(--text-light);
         }
 
         .cta-section {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            background: var(--primary-color-dark);
             color: white;
             text-align: center;
             padding: 4rem 0;
@@ -248,7 +245,7 @@
 
         .cta-button {
             display: inline-block;
-            background: #667eea;
+            background: var(--primary-color);
             color: white;
             padding: 1.2rem 2.5rem;
             text-decoration: none;
