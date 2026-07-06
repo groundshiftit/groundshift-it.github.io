@@ -417,19 +417,22 @@
 
     .about-grid {
       display: grid;
-      max-width: 1040px;
-      grid-template-columns: minmax(0, 1fr) 320px;
-      gap: 72px;
+      width: min(var(--wide), 100%);
+      grid-template-columns: minmax(0, 1fr) 300px;
+      gap: 60px;
       align-items: start;
+      margin: 0 auto;
     }
 
     .about-header {
-      max-width: 1040px;
+      width: min(var(--wide), 100%);
       margin: 0 0 54px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .about-header h2 {
-      max-width: 900px;
+      max-width: 860px;
     }
 
     .about-copy {
@@ -611,10 +614,9 @@ Every decision makes sense.</p>
         <div class="about-grid">
           <div class="about-copy">
             <p>Over the years, I worked with founders through some of their most difficult product and business decisions.</p>
-
-<p>The most valuable part of my work wasn't coming up with new ideas. It was recognizing when sensible decisions were no longer leading to sensible outcomes, even though each individual decision still seemed perfectly reasonable.</p>
-<p>That's what founders bring me in for:</p>
-<p class="big"> someone who can see what has become invisible from the inside, before more time, money and effort are invested in the wrong direction.</p>
+            <p>The most valuable part of my work wasn't coming up with new ideas. It was recognizing when sensible decisions were no longer leading to sensible outcomes, even though each individual decision still seemed perfectly reasonable.</p>
+            <p>That's what founders bring me in for:</p>
+            <p class="big">someone who can see what has become invisible from the inside, before more time, money and effort are invested in the wrong direction.</p>
           </div>
 
           <img class="portrait" src="ja_nowe.png" alt="Marta Wozniak, founder of Groundshift" />
