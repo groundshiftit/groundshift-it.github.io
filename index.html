@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Groundshift helps founders understand why results aren't matching their effort before they invest in another solution." />
+  <meta name="description" content="Groundshift helps founders make sense of situations where progress has stopped matching the effort before they invest in another solution." />
   <title>Groundshift — When progress doesn't match the effort</title>
   <link rel="icon" href="favicon-512x512.png" type="image/png" />
   <style>
@@ -18,9 +18,11 @@
       --purple-dark: #33224d;
       --purple-light: #efe7f8;
       --max: 1160px;
-      --text: 720px;
+      --text: 760px;
+      --wide: 960px;
       --gutter: 48px;
       --radius: 18px;
+      --heading-font: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
     }
 
     * { box-sizing: border-box; }
@@ -47,6 +49,27 @@
     .text {
       width: min(var(--text), calc(100% - var(--gutter)));
       margin: 0 auto;
+    }
+
+    .section-intro {
+      max-width: var(--wide);
+      margin: 0 0 44px;
+    }
+
+    .section-intro h2 {
+      max-width: none;
+    }
+
+    .work-copy {
+      width: min(var(--text), 100%);
+      margin: 0;
+    }
+
+    #why .section-intro,
+    #work .section-intro {
+      max-width: var(--text);
+      margin-left: auto;
+      margin-right: auto;
     }
 
     nav {
@@ -101,43 +124,86 @@
       align-items: center;
       border-bottom: 1px solid var(--line);
       background:
-        radial-gradient(circle at 50% 38%, #fff 0%, #fff 34%, rgba(86, 54, 139, 0.08) 72%, rgba(86, 54, 139, 0.14) 100%),
+        radial-gradient(circle at 50% 30%, #fff 0%, #fff 34%, rgba(86, 54, 139, 0.06) 76%, rgba(86, 54, 139, 0.12) 100%),
         linear-gradient(180deg, #fff 0%, var(--bg) 100%);
-      padding: 56px 0 72px;
+      padding: 76px 0 92px;
     }
 
     .hero-inner {
-      max-width: 950px;
+      width: min(var(--max), calc(100% - var(--gutter)));
+      margin: 0 auto;
+    }
+
+    .opening {
+      max-width: 1020px;
       margin: 0 auto;
       text-align: center;
     }
 
-    .hero h1 {
+    .opening-line {
+      margin: 0 auto 34px;
+      color: var(--ink);
+      font-family: var(--heading-font);
+      font-size: clamp(3.4rem, 5.9vw, 6.15rem);
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+      font-weight: 700;
+      max-width: 980px;
+    }
+
+    .story {
+      max-width: 900px;
       margin: 0 auto;
-      max-width: 950px;
-      font-size: clamp(4rem, 5.25vw, 5.18rem);
-      line-height: 1;
-      letter-spacing: -0.03em;
-      font-weight: 800;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 18px;
+    }
+
+    .story p {
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: clamp(1.16rem, 1.5vw, 1.34rem);
+      line-height: 1.58;
+      max-width: 860px;
+    }
+
+    .story p.strong {
+      color: var(--ink);
+      font-weight: 720;
+    }
+
+    .story .quiet {
+      color: var(--muted);
+    }
+
+    .turn {
+      max-width: 980px;
+      margin: 58px auto 0;
+      padding: 32px 0 0;
+      border-top: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .turn h1 {
+      margin: 0 auto;
+      max-width: 850px;
+      font-family: var(--heading-font);
+      font-size: clamp(2.7rem, 4.4vw, 4.5rem);
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      font-weight: 700;
     }
 
     .purple { color: var(--purple); }
 
     .lead {
-      max-width: 700px;
-      margin: 28px auto 0;
+      max-width: 680px;
+      margin: 26px auto 0;
       color: var(--ink);
-      font-size: clamp(1.22rem, 2vw, 1.58rem);
-      line-height: 1.4;
+      font-size: clamp(1.2rem, 2vw, 1.48rem);
+      line-height: 1.42;
       font-weight: 650;
       letter-spacing: -0.005em;
-    }
-
-    .hero-copy {
-      max-width: 700px;
-      margin: 18px auto 0;
-      color: var(--muted);
-      font-size: 1.08rem;
     }
 
     .actions {
@@ -165,25 +231,12 @@
 
     .button:hover { transform: translateY(-1px); }
 
-    .text-link {
-      color: var(--purple-dark);
-      text-decoration: none;
-      font-weight: 780;
-    }
-
-    section { padding: 124px 0; }
+    section { padding: 104px 0; }
 
     .paper {
       background: var(--paper);
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
-    }
-
-    #work {
-      background:
-        radial-gradient(circle at 50% 38%, #fff 0%, #fff 34%, rgba(86, 54, 139, 0.08) 72%, rgba(86, 54, 139, 0.14) 100%),
-        linear-gradient(180deg, #fff 0%, var(--bg) 100%);
-      padding-top: 72px;
     }
 
     .soft { background: var(--soft); }
@@ -200,15 +253,16 @@
     h2 {
       margin: 0 0 24px;
       max-width: 850px;
-      font-size: clamp(2.47rem, 3.2vw, 3.06rem);
-      line-height: 1.08;
-      letter-spacing: -0.025em;
-      font-weight: 780;
+      font-family: var(--heading-font);
+      font-size: clamp(2.32rem, 3.2vw, 3.02rem);
+      line-height: 1.16;
+      letter-spacing: -0.012em;
+      font-weight: 700;
     }
 
     h3 {
-      margin: 0 0 8px;
-      font-size: 1.08rem;
+      margin: 0 0 10px;
+      font-size: 1.2rem;
       letter-spacing: -0.01em;
     }
 
@@ -222,32 +276,47 @@
 
     .big {
       color: var(--ink);
-      font-size: clamp(1.32rem, 2.3vw, 1.85rem);
-      line-height: 1.32;
+      font-size: clamp(1.26rem, 2.15vw, 1.72rem);
+      line-height: 1.35;
       letter-spacing: -0.012em;
       font-weight: 700;
     }
 
-    .split {
-      display: grid;
-      grid-template-columns: 0.95fr 1.05fr;
-      gap: 72px;
-      align-items: start;
+    .essay p {
+      font-size: clamp(1.12rem, 1.6vw, 1.32rem);
+      line-height: 1.62;
     }
 
-    .lines {
-      list-style: none;
-      margin: 28px 0 0;
-      padding: 0;
-      border-top: 1px solid var(--line);
+    .thought {
+      margin: 24px 0;
     }
 
-    .lines li {
-      padding: 13px 0;
-      border-bottom: 1px solid var(--line);
+    .thought p {
+      margin: 0;
       color: var(--ink);
-      font-weight: 620;
+      font-size: inherit;
+      line-height: inherit;
+      font-weight: 700;
+      letter-spacing: inherit;
     }
+
+    .reason-list {
+      display: grid;
+      gap: 18px;
+      margin: 0 0 42px;
+      padding: 0;
+      list-style: square;
+    }
+
+    .reason-list li {
+      position: relative;
+      padding-left: 28px;
+      color: var(--muted);
+      font-size: clamp(1.12rem, 1.6vw, 1.32rem);
+      line-height: 1.56;
+    }
+
+
 
     .quote {
       margin: 0;
@@ -258,90 +327,62 @@
     .quote blockquote {
       margin: 0;
       color: var(--ink);
-      font-size: clamp(3.76rem, 5vw, 4.24rem);
-      line-height: 1.14;
-      letter-spacing: -0.02em;
-      font-weight: 760;
+      font-family: var(--heading-font);
+      font-size: clamp(2.6rem, 4vw, 3.85rem);
+      line-height: 1.18;
+      letter-spacing: -0.018em;
+      font-weight: 700;
+    }
+
+    .quote-support {
+      margin: 28px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.16rem, 1.8vw, 1.42rem);
+      line-height: 1.55;
     }
 
     .quote cite {
       display: block;
-      margin-top: 18px;
-      color: var(--purple);
-      font-style: normal;
-      font-weight: 850;
-    }
-
-    .mini {
-      margin-top: 18px;
-      color: var(--muted);
-      max-width: 640px;
-    }
-
-    .section-note {
-      margin-top: 28px;
-    }
-
-    .work-heading {
-      max-width: 1120px;
-      margin-bottom: 72px;
+      margin-top: 24px;
+      color: var(--ink);
+      font-size: 1.02rem;
+      font-style: italic;
+      font-weight: 450;
     }
 
     .steps {
+      max-width: var(--text);
+      margin-left: auto;
+      margin-right: auto;
       border-top: 1px solid var(--line);
     }
 
     .step {
       display: grid;
-      grid-template-columns: 64px minmax(0, 1fr);
+      grid-template-columns: 68px minmax(0, 1fr);
       gap: 28px;
-      padding: 42px 0;
+      padding: 34px 0;
       border-bottom: 1px solid var(--line);
     }
 
     .step-number {
       color: var(--purple);
-      font-size: 1rem;
+      font-size: 0.92rem;
       font-weight: 850;
       letter-spacing: 0.08em;
-      padding-top: 8px;
+      padding-top: 7px;
     }
 
-    .step-content {
-      max-width: 650px;
-    }
+    .step-content { max-width: 690px; }
 
     .step-content h3 {
-      margin: 0 0 10px;
-      font-size: clamp(1.76rem, 2.3vw, 2.12rem);
-      line-height: 1.2;
+      margin: 0 0 8px;
+      font-size: clamp(1.5rem, 2.15vw, 1.92rem);
+      line-height: 1.22;
       letter-spacing: -0.02em;
     }
 
-    .step-content p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 1.08rem;
-    }
-
-    .outcome {
-      max-width: 820px;
-      margin: 46px auto 0;
-      padding: 30px;
-      border-radius: var(--radius);
-      background: var(--purple-light);
-      border: 1px solid var(--line);
-      text-align: center;
-    }
-
-    .outcome p {
-      max-width: 680px;
-      margin: 0 auto;
-      color: var(--purple-dark);
-      font-weight: 720;
-      font-size: clamp(1.18rem, 2vw, 1.45rem);
-      line-height: 1.4;
-    }
+    .step-content p { margin: 0; }
 
     .testimonials {
       display: grid;
@@ -374,6 +415,27 @@
       font-weight: 850;
     }
 
+    .about-grid {
+      display: grid;
+      max-width: 940px;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .about-copy {
+      max-width: 620px;
+    }
+
+    .portrait {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 28px;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      background: var(--soft);
+    }
+
     .cta {
       background: var(--purple-dark);
       color: #fff;
@@ -381,15 +443,19 @@
       padding: 92px 0;
     }
 
+    .cta .text {
+      width: min(940px, calc(100% - var(--gutter)));
+    }
+
     .cta h2 {
       color: #fff;
       margin-left: auto;
       margin-right: auto;
-      max-width: 900px;
+      max-width: 940px;
     }
 
     .cta p {
-      max-width: 660px;
+      max-width: 760px;
       margin: 18px auto 0;
       color: rgba(255,255,255,.76);
     }
@@ -398,6 +464,12 @@
       margin-top: 30px;
       background: #fff;
       color: var(--purple-dark);
+    }
+
+    .small-note {
+      font-size: 0.98rem;
+      margin-top: 14px;
+      color: rgba(255,255,255,.66);
     }
 
     footer {
@@ -424,101 +496,28 @@
       text-decoration: none;
     }
 
-
-    .intro-quote {
-      background: var(--paper);
-    }
-
-    .intro-quote .text {
-      width: min(920px, calc(100% - var(--gutter)));
-    }
-
-    .quote-support {
-      margin: 34px 0 0;
-      color: var(--muted);
-      font-size: clamp(1.2rem, 2vw, 1.55rem);
-      line-height: 1.55;
-      font-weight: 450;
-    }
-
-    .quote cite {
-      display: block;
-      margin-top: 30px;
-      color: var(--ink);
-      font-size: 1.08rem;
-      font-style: italic;
-      font-weight: 450;
-    }
-
-    .quiet-line {
-      margin-top: 48px;
-      padding-top: 30px;
-      border-top: 1px solid var(--line);
-      max-width: 760px;
-    }
-
-    .quiet-line strong {
-      display: block;
-      margin-bottom: 8px;
-      font-size: clamp(1.3rem, 2.2vw, 1.8rem);
-      line-height: 1.35;
-    }
-
-    .why-me {
-      background: var(--bg);
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 320px;
-      gap: 72px;
-      align-items: center;
-    }
-
-    .portrait {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      border-radius: 28px;
-      object-fit: cover;
-      border: 1px solid var(--line);
-      background: var(--soft);
-    }
-
-    .why-me .quote {
-      margin: 22px 0;
-    }
-
-    .why-me .quote blockquote {
-      font-size: clamp(1.45rem, 2.2vw, 2rem);
-      line-height: 1.25;
-    }
-
     @media (max-width: 900px) {
-      .why-grid { grid-template-columns: 1fr; }
+      .testimonials, .about-grid { grid-template-columns: 1fr; }
       .portrait { max-width: 340px; }
-    }
-
-    @media (max-width: 900px) {
-      .split, .testimonials { grid-template-columns: 1fr; }
       .hero { min-height: auto; }
     }
 
     @media (max-width: 680px) {
       :root { --gutter: 36px; }
       .nav-links a:not(.nav-cta) { display: none; }
-      .hero { padding: 48px 0 64px; }
-      .hero h1 { font-size: 2.55rem; letter-spacing: -0.025em; }
-      .lead { font-size: 1.18rem; }
+      nav { padding: 24px 0; }
+      .hero { padding: 42px 0 58px; }
+      .opening-line { font-size: 2.72rem; }
+      .story { gap: 16px; }
+      .turn { margin-top: 40px; padding: 28px 0 0; }
+      .turn h1 { font-size: 2.62rem; }
+      .section-intro { margin-bottom: 34px; }
+      .actions { justify-content: flex-start; flex-direction: column; align-items: stretch; }
+      .button { width: 100%; text-align: center; }
       section { padding: 68px 0; }
-      #work { padding-top: 48px; }
-      .work-heading { margin-bottom: 48px; }
-      .step {
-        grid-template-columns: 1fr;
-        gap: 12px;
-        padding: 34px 0;
-      }
-      .actions { flex-direction: column; align-items: stretch; }
-      .button, .text-link { width: 100%; text-align: center; }
+      .step { grid-template-columns: 1fr; gap: 10px; padding: 30px 0; }
+      .quote { padding-left: 20px; }
+      .quote blockquote { font-size: 2.18rem; }
       .footer-grid { align-items: flex-start; flex-direction: column; }
     }
   </style>
@@ -543,21 +542,46 @@
     </div>
 
     <section class="hero">
-      <div class="wrap">
-        <div class="hero-inner">
-          <h1>When progress doesn’t match <span class="purple">the effort.</span></h1>
-          <p class="lead">Helping founders understand why all the sensible things they've already tried haven't produced the results they expected.</p>
+      <div class="hero-inner">
+        <div class="opening">
+          <p class="opening-line">When progress doesn’t match <span class="purple">the effort.</span></p>
+          <p class="lead">You improve the product.
+You refine the strategy.
+You rethink pricing.
+Every decision makes sense.</p>
+        <p class="lead">
+        Yet somehow.. progress still doesn't match the effort.</p>
 
-          <div class="actions">
-            <a class="button" href="https://calendar.app.google/7KwpNUz6DqgYgBEh8">Book a free 30-minute call</a>
-          </div>
+        </div>
+        <div class="actions">
+          <a class="button" href="https://calendar.app.google/7KwpNUz6DqgYgBEh8">Understand what's getting in your way</a>
         </div>
       </div>
     </section>
   </header>
 
   <main>
-    <section id="why" class="intro-quote">
+    <section id="why" class="paper">
+      <div class="wrap">
+        <div class="section-intro">
+          <p class="kicker">The shift</p>
+          <h2>The instinct is to ask what to try next.</h2>
+          <div class="work-copy essay">
+            <p>Another feature. Another hire. Another process change. Another strategy conversation.</p>
+            <p>Sometimes that is exactly what is needed.</p>
+            <p>But when reasonable things keep failing to create meaningful progress, the more useful question is different.</p>
+
+            <div class="thought">
+              <h3>Why didn’t the sensible things you already tried get you where you wanted to be?</h3>
+            </div>
+
+            <p>That question usually reveals more than another brainstorm. It shows what the team has been assuming, what everyone has been optimizing for, and where the explanation no longer fits reality.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft">
       <div class="text">
         <figure class="quote">
           <blockquote>If the problem was clear, I’d have solved it myself.</blockquote>
@@ -567,52 +591,34 @@
       </div>
     </section>
 
-    <section class="soft" id="work">
-        
-        <div class="wrap">
-            <p class="kicker">What</p>
-            <h2>You'll leave with</h2>
-            <div class="steps">
-            <div class="step">
-                <div class="step-number">01</div>
-                <div class="step-content">
-                <h3>The full picture</h3>
-                <p>You'll understand what happened, why it made sense, and where progress stopped matching the effort.</p>
-                </div>
-            </div>
+    <section id="work">
+      <div class="wrap">
+        <div class="section-intro">
+          <p class="kicker">For whom</p>
+          <h2>You might be here because...</h2>
 
-            <div class="step">
-                <div class="step-number">02</div>
-                <div class="step-content">
-                <h3>The explanation that fits reality</h3>
-                <p>You'll separate assumptions from evidence and identify which explanations actually fit the facts.</p>
-                </div>
-            </div>
+          <ul class="reason-list">
+            <li>Every new initiative seems reasonable, but the overall situation isn't improving.</li>
+            <li>Your team has plenty of ideas, but struggles to agree on what the real problem is.</li>
+            <li>You're no longer sure whether you're solving the cause or the symptoms.</li>
+            <li>You keep asking what to do next, when the more useful question might be why the sensible things you've already tried haven't worked.</li>
+          </ul>
 
-            <div class="step">
-                <div class="step-number">03</div>
-                <div class="step-content">
-                <h3>The missing connections</h3>
-                <p>You'll see how seemingly unrelated pieces fit together.</p>
-                </div>
-            </div>
-
-            <div class="step">
-                <div class="step-number">04</div>
-                <div class="step-content">
-                <h3>The next step that matters</h3>
-                <p>You'll know where additional time, money, and effort are most likely to create meaningful progress</p>
-                </div>
-            </div>
-            </div>
+          <div class="work-copy essay">
+            <p>There isn't a fixed framework. Every situation is different.</p>
+            <p>Sometimes we spend a few hours reconstructing what happened. Sometimes I review product decisions, research, strategy documents or internal discussions. Sometimes I simply keep asking questions until the explanation stops fitting the evidence.</p>
+            <p>I'm not looking for the fastest answer. I'm looking for the explanation that best matches reality.</p>
+          </div>
         </div>
-
+      </div>
     </section>
 
-    <section id="testimonials">
+    <section id="testimonials" class="paper">
       <div class="wrap">
-        <p class="kicker">Testimonials</p>
-        <h2>What happened for others</h2>
+        <div class="section-intro">
+          <p class="kicker">Testimonials</p>
+          <h2>What happened for others</h2>
+        </div>
 
         <div class="testimonials">
           <figure class="testimonial">
@@ -633,24 +639,14 @@
       </div>
     </section>
 
-    <section class="why-me">
-      <div class="wrap why-grid">
-        <div>
-          <p class="kicker">Why this works</p>
-          <h2>Smart people make sensible decisions.</h2>
-          <p class="big">But sensible decisions built on an incomplete picture rarely lead where they expect.</p>
-
-          <p>Most conversations begin with:</p>
-
-          <figure class="quote">
-            <p>What should we do next?</p>
-          </figure>
-
-          <p>Groundshift begins with:</p>
-
-          <figure class="quote">
-            <p>Why didn't the sensible things you've already tried get you where you wanted to be?</p>
-          </figure>
+    <section class="about">
+      <div class="wrap about-grid">
+        <div class="about-copy">
+          <p class="kicker">Why me</p>
+          <h2>I spent years helping teams untangle complex product decisions.</h2>
+          <p class="big">The pattern that kept repeating was simple: capable people were often solving slightly different versions of the problem.</p>
+          <p>The better we understood the situation, the fewer solutions we needed.</p>
+          <p>Groundshift is built around that work: helping founders make sense of situations where progress has stopped matching the effort.</p>
         </div>
 
         <img class="portrait" src="ja_nowe.png" alt="Marta Wozniak, founder of Groundshift" />
@@ -659,10 +655,11 @@
 
     <section class="cta">
       <div class="text">
-        <h2>When progress doesn’t match the effort</h2>
-        <p>it’s worth understanding why before trying something else.</p>
-        <p>No sales pitch. If I don’t think I can help, I’ll tell you. If I do, we’ll figure out the next step together.</p>
-        <a class="button" href="https://calendar.app.google/7KwpNUz6DqgYgBEh8">Book a free 30-minute call</a>
+        <h2>Sometimes one conversation is enough.</h2>
+        <p>Sometimes it becomes clear there’s a bigger piece of work. Sometimes I’ll tell you I don’t think I can help.</p>
+        <p>Either way, you’ll leave with a better understanding of the situation than when you arrived.</p>
+        <a class="button" href="https://calendar.app.google/7KwpNUz6DqgYgBEh8">Book a free 30-minute conversation</a>
+        <p class="small-note">No sales pitch. No obligation.</p>
       </div>
     </section>
   </main>
