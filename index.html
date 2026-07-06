@@ -417,14 +417,23 @@
 
     .about-grid {
       display: grid;
-      max-width: 940px;
-      grid-template-columns: minmax(0, 1fr) 280px;
-      gap: 56px;
-      align-items: center;
+      max-width: 1040px;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 72px;
+      align-items: start;
+    }
+
+    .about-header {
+      max-width: 1040px;
+      margin: 0 0 54px;
+    }
+
+    .about-header h2 {
+      max-width: 900px;
     }
 
     .about-copy {
-      max-width: 620px;
+      max-width: 680px;
     }
 
     .portrait {
@@ -512,6 +521,7 @@
       .turn { margin-top: 40px; padding: 28px 0 0; }
       .turn h1 { font-size: 2.62rem; }
       .section-intro { margin-bottom: 34px; }
+      .about-header { margin-bottom: 34px; }
       .actions { justify-content: flex-start; flex-direction: column; align-items: stretch; }
       .button { width: 100%; text-align: center; }
       section { padding: 68px 0; }
@@ -591,26 +601,43 @@ Every decision makes sense.</p>
       </div>
     </section>
 
-    <section id="work">
+    <section class="about">
       <div class="wrap">
-        <div class="section-intro">
-          <p class="kicker">For whom</p>
-          <h2>You might be here because...</h2>
+        <div class="about-header">
+          <p class="kicker">WHY me</p>
+          <h2>I notice when things stop adding up.</h2>
+        </div>
 
-          <ul class="reason-list">
-            <li>Every new initiative seems reasonable, but the overall situation isn't improving.</li>
-            <li>Your team has plenty of ideas, but struggles to agree on what the real problem is.</li>
-            <li>You're no longer sure whether you're solving the cause or the symptoms.</li>
-            <li>You keep asking what to do next, when the more useful question might be why the sensible things you've already tried haven't worked.</li>
-          </ul>
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>Over the years, I worked with founders through some of their most difficult product and business decisions.</p>
 
-          <div class="work-copy essay">
-            <p>There isn't a fixed framework. Every situation is different.</p>
-            <p>Sometimes we spend a few hours reconstructing what happened. Sometimes I review product decisions, research, strategy documents or internal discussions. Sometimes I simply keep asking questions until the explanation stops fitting the evidence.</p>
-            <p>I'm not looking for the fastest answer. I'm looking for the explanation that best matches reality.</p>
+<p>My most valuable work wasn't producting new ideas or solutions. It was recognizing when the accepted explanation no longer matched what was actually happening.</p>
+
+<p class="big">That's what founders bring me in for: an outside perspective that spots the patterns and  inconsistencies before they become expensive ideas.</p>
           </div>
+
+          <img class="portrait" src="ja_nowe.png" alt="Marta Wozniak, founder of Groundshift" />
         </div>
       </div>
+    </section>
+
+    <section class="soft">
+        <div class="text">
+            <p class="kicker">What to expect</p>
+            <h2>No predefined framework. No generic advice.</h2>
+            <p>Every situation is different, so the work starts with understanding what's actually happening.</p>
+
+<p>Sometimes that means untangling months of decisions together. Sometimes I review product strategy, research or internal discussions before we talk. Sometimes one conversation is enough to make the next step obvious. Sometimes it becomes clear there's a bigger piece of work to do.</p>
+
+<p> The goal isn't to leave with more ideas.</p>
+
+<p>Sometimes it becomes clear there's a bigger piece of work to do.</p>
+
+<p>I don't apply the same framework to every company.</p>
+
+<p> I help you understand what's been holding your progress back which makes the next steps clear.</p>
+        </div>
     </section>
 
     <section id="testimonials" class="paper">
@@ -636,20 +663,6 @@ Every decision makes sense.</p>
             <cite>Louis</cite>
           </figure>
         </div>
-      </div>
-    </section>
-
-    <section class="about">
-      <div class="wrap about-grid">
-        <div class="about-copy">
-          <p class="kicker">Why me</p>
-          <h2>I spent years helping teams untangle complex product decisions.</h2>
-          <p class="big">The pattern that kept repeating was simple: capable people were often solving slightly different versions of the problem.</p>
-          <p>The better we understood the situation, the fewer solutions we needed.</p>
-          <p>Groundshift is built around that work: helping founders make sense of situations where progress has stopped matching the effort.</p>
-        </div>
-
-        <img class="portrait" src="ja_nowe.png" alt="Marta Wozniak, founder of Groundshift" />
       </div>
     </section>
 
