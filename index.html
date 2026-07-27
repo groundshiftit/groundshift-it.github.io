@@ -65,13 +65,6 @@
       margin: 0;
     }
 
-    #why .section-intro,
-    #work .section-intro {
-      max-width: var(--text);
-      margin-left: auto;
-      margin-right: auto;
-    }
-
     nav {
       display: flex;
       justify-content: space-between;
@@ -186,7 +179,7 @@
 
     .turn h1 {
       margin: 0 auto;
-      max-width: 850px;
+      max-width: 900px;
       font-family: var(--heading-font);
       font-size: clamp(2.7rem, 4.4vw, 4.5rem);
       line-height: 1.12;
@@ -197,12 +190,12 @@
     .purple { color: var(--purple); }
 
     .lead {
-      max-width: 680px;
+      max-width: 750px;
       margin: 26px auto 0;
-      color: var(--ink);
+      color: var(--muted);
       font-size: clamp(1.2rem, 2vw, 1.48rem);
-      line-height: 1.42;
-      font-weight: 650;
+      line-height: 1.2;
+      color:#645c70;
       letter-spacing: -0.005em;
     }
 
@@ -546,8 +539,8 @@
         </a>
 
         <div class="nav-links">
+          <a href="#what">What</a>
           <a href="#why">Why</a>
-          <a href="#work">What</a>
           <a href="#testimonials">Testimonials</a>
           <a class="nav-cta" href="https://calendar.app.google/7KwpNUz6DqgYgBEh8">Book a call</a>
         </div>
@@ -558,37 +551,34 @@
       <div class="hero-inner">
         <div class="opening">
           <p class="opening-line">When progress doesn’t match <span class="purple">the effort.</span></p>
-          <p class="lead">You improve the product.
-You refine the strategy.
-You rethink pricing.
-Every decision makes sense.</p>
+          <p class="lead">Before trying something new, understand why the current approach isn't working.</p>
         <p class="lead">
-        Yet somehow.. progress still doesn't match the effort.</p>
+        Then take <span class="big">the right</span> next step.</p>
 
         </div>
         <div class="actions">
-          <a class="button" href="https://calendar.app.google/7KwpNUz6DqgYgBEh8">Understand what's getting in your way</a>
+          <a class="button" href="https://calendar.app.google/7KwpNUz6DqgYgBEh8">Start with a free diagnostic session</a>
         </div>
       </div>
     </section>
   </header>
 
   <main>
-    <section id="why" class="paper">
+    <section id="what" class="about paper">
       <div class="wrap">
-        <div class="section-intro">
+        <div class="about-header">
           <p class="kicker">The shift</p>
           <h2>The instinct is to ask what to try next.</h2>
-          <div class="work-copy essay">
+          <div class="about-copy">
             <p>Another feature. Another hire. Another process change. Another strategy conversation.</p>
             <p>Sometimes that is exactly what is needed.</p>
-            <p>But when reasonable things keep failing to create meaningful progress, the more useful question is different.</p>
+            <p>But when reasonable things keep failing to create meaningful progress, the more useful question is this:</p>
 
             <div class="thought">
               <h3>Why didn’t the sensible things you already tried get you where you wanted to be?</h3>
             </div>
 
-            <p>That question usually reveals more than another brainstorm. It shows what the team has been assuming, what everyone has been optimizing for, and where the explanation no longer fits reality.</p>
+            <p>That question usually reveals more than another brainstorm. It shows what was assumed, what have you been optimizing for, and where to look for the right next step.</p>
           </div>
         </div>
       </div>
@@ -604,7 +594,7 @@ Every decision makes sense.</p>
       </div>
     </section>
 
-    <section class="about">
+    <section id="why" class="about">
       <div class="wrap">
         <div class="about-header">
           <p class="kicker">WHY me</p>
@@ -616,7 +606,10 @@ Every decision makes sense.</p>
             <p>Over the years, I worked with founders through some of their most difficult product and business decisions.</p>
             <p>The most valuable part of my work wasn't coming up with new ideas. It was recognizing when sensible decisions were no longer leading to sensible outcomes, even though each individual decision still seemed perfectly reasonable.</p>
             <p>That's what founders bring me in for:</p>
-            <p class="big">someone who can see what has become invisible from the inside, before more time, money and effort are invested in the wrong direction.</p>
+            <div class="thought">
+              <h3>Someone who can see what has become invisible from the inside, before more time, money and effort are invested in the wrong direction.</h3>
+
+            </div>
           </div>
 
           <img class="portrait" src="ja_nowe.png" alt="Marta Wozniak, founder of Groundshift" />
